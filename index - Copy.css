@@ -104,9 +104,8 @@ a{
 
 .skill-card{
     display: flex;
-    cursor: pointer;
     transition: all 1s;
-   
+    
     
 }
 
@@ -126,9 +125,11 @@ a{
 #tailwind {
     border-bottom: 3px solid #38B2AC; /* TailwindCSS logo color */
     width: 100px;
+    
 }
 #react {
     border-bottom: 3px solid #61DAFB; /* ReactJS logo color */
+    margin-left: 10px;
 }
 
 
@@ -172,6 +173,8 @@ a{
 }
 .project-card:hover{
     transform: translateY(-10px);
+    outline:  #fff ridge medium;
+    outline-offset: 2px;
 }
 
 .project-img{
@@ -219,7 +222,6 @@ a{
     position: relative;
 }
 .about-info{
-    opacity: 0.6;
     font-size: 20px;
     line-height: 40px;
 }

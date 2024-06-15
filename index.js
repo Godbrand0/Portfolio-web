@@ -22,7 +22,7 @@ var nav = document.querySelector('.navbar');
 var links = document.querySelectorAll('.link');
 var texts = document.querySelectorAll('.text');
 var icons = document.querySelectorAll('.icon');
-
+var projects = document.querySelectorAll('.project-card')
 var icon_8 = document.querySelector('.icons-8');
 
 var inputs = document.querySelectorAll('input');
@@ -130,6 +130,10 @@ function darkmode() {
     icons.forEach(icon => {
         icon.style.color = 'white';
     });
+    projects.forEach(project => {
+       project.style.outlineColor ='#fff'
+    });
+    
     icon_8.style.fill = 'white'; // Make sure to set this correctly
 }
 
@@ -138,6 +142,9 @@ function lightmode() {
     body.style.color = 'black';
     btn.style.color = 'black';
     
+    projects.forEach(project => {
+        project.style.outlineColor ='#000'
+    });
    
     nav.style.background = '#fff';
     links.forEach(link => {

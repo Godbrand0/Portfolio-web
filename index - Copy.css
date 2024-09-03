@@ -213,7 +213,8 @@ a {
   grid-gap: 40px;
 }
 .about-img-container {
-  position: relative;
+  display: block;
+  text-align: center;
 }
 .about-info {
   font-size: 20px;
@@ -226,22 +227,18 @@ a {
   border-radius: 20px;
 }
 .download-cv-btn {
-  position: relative;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  top: -40px;
   padding: 10px 20px;
-  color: #fff;
+  color: #000;
   border: none;
   font-size: 16px;
   text-transform: capitalize;
   cursor: pointer;
   transition: 0.5s;
-  background: transparent;
+  background: #fff;
 }
 .download-cv-btn:hover {
   background: #000;
+  color: #fff;
 }
 .contact-section {
   display: flex;

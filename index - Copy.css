@@ -231,6 +231,7 @@ a {
   color: #000;
   border: none;
   font-size: 16px;
+  border-radius: 5px;
   text-transform: capitalize;
   cursor: pointer;
   transition: 0.5s;

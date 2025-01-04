@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "text": "Signup & login page using Firebase auth",
+      "link": "https://godbrand0.github.io/working-on/dist/ogin.htm",
+      "img": "images/ogin.jpg"
+    },
+    {
+      "id": 1,
+      "text": "Grocify web app using TailwindCSS and Firebase",
+      "link": "https://godbrand0.github.io/grocery/dist/grocery.htm",
+      "img": "images/Screenshot 2024-06-03 215153.jpg"
+    },
+    {
+      "id": 2,
+      "text": "E-commerce page using TailwindCSS and JavaScript",
+      "link": "https://godbrand0.github.io/ecommerce-product-page-main/page.htm",
+      "img": "images/Screenshot 2024-06-14 111046.png"
+    },
+    {
+      "id": 3,
+      "text": "Crypto & expenses dashboard using JavaScript",
+      "link": "https://godbrand0.github.io/crypto/crypto.htm",
+      "img": "images/Annotation 2024-03-15 181900.jpg"
+    },
+    {
+      "id": 4,
+      "text": "Online fashion store using HTML & CSS",
+      "link": "https://godbrand0.github.io/ankra/ankra.htm",
+      "img": "images/WhatsApp Image 2024-01-08 at 2.43.34 AM.jpeg"
+    },
+    {
+      "id": 5,
+      "text": "Grandcoast hotels interactive web page using HTML CSS & javascript",
+      "link": "https://grandcoast.netlify.app/",
+      "img": "images/Screenshot 2024-09-02 215514.png"
+    },
+    {
+      "id": 6,
+      "text": "Interactive card details form using tailwindCSS & javascript",
+      "link": "https://godbrand0.github.io/interactive-card-details-form-main/interactive-card-details-form-main/card.html",
+      "img": "images/Screenshot 2024-06-20 202722.png"
+    }
+  ]
+}

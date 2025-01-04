@@ -71,3 +71,37 @@ function changeMode() {
     lightmode();
   }
 }
+
+// json server
+
+const renderProjects = async () => {
+  const url = "http://localhost:3000/projects"; // API URL for projects
+
+  try {
+    // Fetch projects data
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Failed to fetch projects: ${res.status}`);
+    const projectCards = await res.json();
+
+    console.log("Fetched Projects:", projectCards);
+
+    // Check if container exists
+    const projectContainer = document.querySelector(".project-container");
+
+    projectContainer.innerHTML = "";
+    projectCards.forEach((project) => {
+      const projectCard = document.createElement("div");
+      projectCard.className = "project-card";
+      projectCard.innerHTML = `
+   <a href="${project.link}" class="btn" target="_blank" rel="noopener noreferrer">
+          <img src="${project.img}" alt="${project.title}" class="project-img" />
+          <p class="text-8">${project.text}</p>
+        </a>
+  `;
+      projectContainer.appendChild(projectCard);
+    });
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+window.addEventListener("DOMContentLoaded", () => renderProjects());

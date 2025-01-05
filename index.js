@@ -74,34 +74,63 @@ function changeMode() {
 
 // json server
 
+const projectcards = [
+  {
+    id: 1,
+    text: "Grocify web app using HTML, TailwindCSS and FIREBASE",
+    link: "https://godbrand0.github.io/grocery/dist/grocery.htm",
+    img: "images/Screenshot 2024-06-03 215153.jpg",
+  },
+  {
+    id: 2,
+    text: "E-commerce page using HTML, TailwindCSS and JAVASCRIPT",
+    link: "https://godbrand0.github.io/ecommerce-product-page-main/page.htm",
+    img: "images/Screenshot 2024-06-14 111046.png",
+  },
+  {
+    id: 4,
+    text: "Grandcoast hotels interactive web page using HTML, CSS & JAVASCRIPT",
+    link: "https://grandcoast.netlify.app/",
+    img: "images/Screenshot 2024-09-02 215514.png",
+  },
+
+  {
+    id: 6,
+    text: "Mobile responsive landing page using React.js and CSS",
+    link: "https://getajobproject.netlify.app/",
+    img: "images/Screenshot 2025-01-04 090408.png",
+  },
+  {
+    id: 7,
+    text: "Mobile responsive E-commerce website using HTML,CSS and JAVASCRIPT",
+    link: "https://guileless-nougat-b180d9.netlify.app/",
+    img: "images/Screenshot 2025-01-04 091715.png",
+  },
+];
+
 const renderProjects = async () => {
-  const url = "http://localhost:3000/projects"; // API URL for projects
+  const loadingIndicator = document.querySelector(".loading-indicator");
+  const projectContainer = document.querySelector(".project-container");
 
-  try {
-    // Fetch projects data
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Failed to fetch projects: ${res.status}`);
-    const projectCards = await res.json();
+  // Simulate loading delay
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    console.log("Fetched Projects:", projectCards);
+  // Hide loading indicator and show project container
+  loadingIndicator.style.display = "none";
 
-    // Check if container exists
-    const projectContainer = document.querySelector(".project-container");
-
-    projectContainer.innerHTML = "";
-    projectCards.forEach((project) => {
-      const projectCard = document.createElement("div");
-      projectCard.className = "project-card";
-      projectCard.innerHTML = `
-   <a href="${project.link}" class="btn" target="_blank" rel="noopener noreferrer">
-          <img src="${project.img}" alt="${project.title}" class="project-img" />
-          <p class="text-8">${project.text}</p>
-        </a>
-  `;
-      projectContainer.appendChild(projectCard);
-    });
-  } catch (error) {
-    console.error(error.message);
-  }
+  // Map through projects and render them
+  projectcards.forEach((project) => {
+    const projectCard = document.createElement("div");
+    projectCard.className = "project-card";
+    projectCard.innerHTML = `
+      <a href="${project.link}" class="btn" target="_blank" rel="noopener noreferrer">
+        <img src="${project.img}" alt="${project.text}" class="project-img" />
+        <p class = "text-8">${project.text}</p>
+      </a>
+    `;
+    projectContainer.appendChild(projectCard);
+  });
 };
-window.addEventListener("DOMContentLoaded", () => renderProjects());
+
+// Trigger renderProjects on DOMContentLoaded
+window.addEventListener("DOMContentLoaded", renderProjects);

@@ -149,7 +149,7 @@ a {
 }
 .project-container {
   display: grid;
-  grid-template-columns: repeat(3, 250px);
+  grid-template-columns: repeat(3, 200px);
   grid-column-gap: 70px;
   grid-row-gap: 60px;
   justify-content: center;
@@ -157,19 +157,16 @@ a {
   margin: 50px;
 }
 .project-card {
-  height: px;
   width: 100%;
   position: relative;
   margin-top: 10px;
   overflow: auto;
-  border-radius: 20px 20px 0px 0px;
+
   cursor: pointer;
   transition: all 0.3s;
 }
 .project-card:hover {
-  transform: translateY(-10px);
-  outline: #fff ridge medium;
-  outline-offset: 2px;
+  transform: scale(1.2);
 }
 
 .project-img {
@@ -191,8 +188,12 @@ a {
   text-align: center;
   margin-top: 10px;
   font-size: 13px;
+
   font-weight: bold;
   overflow-wrap: break-word;
+}
+.light {
+  color: black;
 }
 .project-card:hover .project-content {
   opacity: 1;
@@ -291,6 +292,8 @@ a {
   .skills-container {
     display: grid;
     grid-template-columns: repeat(4, 80px);
+    column-gap: 30px;
+    row-gap: 30px;
     float: left;
   }
   .link {

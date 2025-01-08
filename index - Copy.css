@@ -216,6 +216,7 @@ a {
 .about-img-container {
   display: block;
   text-align: center;
+  height: auto;
 }
 .about-info {
   font-size: 20px;

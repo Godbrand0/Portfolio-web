@@ -149,7 +149,7 @@ a {
 }
 .project-container {
   display: grid;
-  grid-template-columns: repeat(3, 200px);
+  grid-template-columns: repeat(3, 300px);
   grid-column-gap: 70px;
   grid-row-gap: 60px;
   justify-content: center;
@@ -185,11 +185,10 @@ a {
 }
 
 .text-8 {
-  text-align: center;
   margin-top: 10px;
   font-size: 13px;
 
-  font-weight: bold;
+  font-weight: 300;
   overflow-wrap: break-word;
 }
 .light {
